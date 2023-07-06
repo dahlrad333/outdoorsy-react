@@ -13,7 +13,7 @@ export default function ResultsComponent({
 
 
   return (
-    <div>
+    <div className={`mt-12`}>
         {results.map((result: any) => (
             <ResultComponent result={result} key={result.id} included={included}></ResultComponent>
         ))}
