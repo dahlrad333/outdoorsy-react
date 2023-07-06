@@ -1,18 +1,21 @@
-import Result from "./result";
+import ResultComponent from "./result";
+import { Result } from "../../types/result";
 
 type Props = {
-    results: any[]
+    results: Result[],
+    included: any[]
 }
 
 export default function ResultsComponent({
     results,
+    included
 }: Props) {
 
 
   return (
-    <div className="">
+    <div>
         {results.map((result: any) => (
-            <Result result={result} key={result.id}></Result>
+            <ResultComponent result={result} key={result.id} included={included}></ResultComponent>
         ))}
     </div>
   );

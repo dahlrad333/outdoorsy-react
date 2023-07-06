@@ -4,7 +4,7 @@ import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      <main className={`font-sans`}>
+      <main>
         <Component {...pageProps} />
       </main>
         
