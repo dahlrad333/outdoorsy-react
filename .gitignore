@@ -4,8 +4,4 @@
 
 # next.js
 .next/
-.next/cache/
-.next/server/pages/
-.next/static/chunks/
-.next/trace
 
