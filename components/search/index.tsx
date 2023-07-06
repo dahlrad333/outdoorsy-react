@@ -48,32 +48,32 @@ export default function SearchComponent() {
 
   return (
     <div className="flex flex-col h-screen justify-start items-center w-screen">
-      <div className="border border-grey w-full h-[12%] text-2xl fixed bg-white flex flex-row justify-center items-center mx-3">
-      <input
-        type="text"
-        className="h-[67%] border border-black rounded w-1/3 mx-2 px-3"
-        placeholder="Search"
-        value={searchTerm}
-        onChange={handleFilterChange}
-      />
-      <input
-        type="number"
-        min="1"
-        className="mx-2 h-[67%] border border-black rounded w-[15%] px-3"
-        placeholder="Page Limit (25)"
-        value={pageLimit}
-        onChange={handleLimitChange}
-      />
-      <ReactPaginate
-        pageCount={totalPages}
-        pageRangeDisplayed={pageLimit}
-        onPageChange={(selectedPage) => handlePageChange(selectedPage.selected + 1)}
-        containerClassName="pagination"
-        activeClassName="active"
-        previousLabel="Previous"
-        nextLabel="Next"
-        className='flex flex-row px-2 w-[20%] px-3'
-      />
+      <div className="border border-grey w-full h-[12%] text-2xl fixed bg-white flex flex-row justify-around items-center">
+        <input
+          type="text"
+          className="h-[67%] border border-black rounded w-1/3 mx-2 px-3"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={handleFilterChange}
+        />
+        <input
+          type="number"
+          min="1"
+          className="mx-2 h-[67%] border border-black rounded w-[15%] px-3"
+          placeholder="Page Limit (25)"
+          value={pageLimit}
+          onChange={handleLimitChange}
+        />
+        <ReactPaginate
+          pageCount={totalPages}
+          pageRangeDisplayed={pageLimit}
+          onPageChange={(selectedPage) => handlePageChange(selectedPage.selected + 1)}
+          containerClassName="pagination"
+          activeClassName="active"
+          previousLabel="Previous"
+          nextLabel="Next"
+          className='flex flex-row w-[20%] mr-4'
+        />
       </div>
       
       <div className="overflow-y-auto mt-4">
